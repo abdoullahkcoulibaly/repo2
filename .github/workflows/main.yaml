@@ -19,10 +19,11 @@ jobs:
 
       - name: Download files from URLs
         run: |
-          while IFS= read -r url; do
+            while IFS= read -r url; do
             curl -OJL "$url"
             echo "$url"
-          done < urls.txt
+            done <  <<EOF
+            EOF
 
       - name: Add and commit downloaded files
         run: |
