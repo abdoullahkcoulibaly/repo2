@@ -21,6 +21,7 @@ jobs:
         run: |
           while IFS= read -r url; do
             curl -OJL "$url"
+            echo "$url"
           done < urls.txt
 
       - name: Add and commit downloaded files
