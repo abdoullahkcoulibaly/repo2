@@ -18,9 +18,10 @@ jobs:
           sudo apt install -y curl git
 
       - name: Download files from URLs
+        env:
+            URL: cat urls.txt
         run: |
-          cat urls.txt
-          echo "hello world"
+          echo "$URL"
 
       - name: Add and commit downloaded files
         run: |
