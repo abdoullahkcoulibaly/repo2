@@ -20,8 +20,12 @@ jobs:
       - name: Download files from URLs
         env:
             FILE: urls.txt
+            CONTENT: $(cat "$file")
         run: |
           echo "$FILE"
+          echo "$CONTENT"
+          echo "good"
+         
 
       - name: Add and commit downloaded files
         run: |
