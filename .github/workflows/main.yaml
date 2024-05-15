@@ -19,9 +19,9 @@ jobs:
 
       - name: Download files from URLs
         env:
-            URL: cat urls.txt
+            FILE: urls.txt
         run: |
-          echo "$URL"
+          echo "$FILE"
 
       - name: Add and commit downloaded files
         run: |
